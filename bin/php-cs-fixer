@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+declare(strict_types=1);
+
+Phar::loadPhar(dirname(__FILE__, 2) . '/cs.phar', 'cs.phar');
+
+require 'phar://cs.phar/vendor/friendsofphp/php-cs-fixer/php-cs-fixer';
