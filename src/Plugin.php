@@ -6,6 +6,7 @@ namespace O0h\DevKit;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
+use Composer\Plugin\Capability\CommandProvider as CommandCapability;
 use Composer\Plugin\PluginInterface;
 use Composer\Plugin\Capable;
 
@@ -19,7 +20,7 @@ class Plugin implements PluginInterface, Capable
     public function getCapabilities()
     {
         return [
-            'Composer\Plugin\Capability\CommandProvider' => 'My\Composer\CommandProvider',
+            CommandCapability::class => CommandProvider::class,
         ];
     }
 

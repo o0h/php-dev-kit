@@ -7,12 +7,20 @@
         "composer-plugin-api": "^2.0"
     },
     "require-dev": {
+        "composer/composer": "^2.8",
         "humbug/box": "4.6.2"
     },
     "autoload": {
         "psr-4": {
             "O0h\\DevKit\\": "src/"
         }
+    },
+    "scripts": {
+        "dev-kit:cs-fix": "php-cs-fixer fix",
+        "dev-kit:cs-fix-check": "php-cs-fixer check src"
+    },
+    "scripts-descriptions": {
+        "dev-kit:cs-fix": "php-cs-fixer の fix"
     },
     "bin": [
         "bin/php-cs-fixer",
